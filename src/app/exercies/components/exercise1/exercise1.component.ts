@@ -1,12 +1,12 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'app-exercise1',
+  templateUrl: './exercise1.component.html',
+  styleUrls: ['./exercise1.component.css']
 })
-export class AppComponent implements OnInit {
+export class Exercise1Component implements OnInit {
+
   title = 'helloWorld';
 
   inputCounter: number;

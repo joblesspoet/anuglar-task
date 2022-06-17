@@ -1,13 +1,11 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'app-exercise3',
+  templateUrl: './exercise3.component.html',
+  styleUrls: ['./exercise3.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'helloWorld';
+export class Exercise3Component implements OnInit {
 
   inputCounter: number;
   @Output('ngModelChange') updatedValue = new EventEmitter();
@@ -34,5 +32,7 @@ export class AppComponent implements OnInit {
     }
 
   }
+
+
 
 }
