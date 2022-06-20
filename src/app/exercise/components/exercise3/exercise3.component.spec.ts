@@ -4,7 +4,7 @@ import { Exercise3Component } from './exercise3.component';
 
 describe('Exercise3Component', () => {
   let component: Exercise3Component;
-  let fixture: ComponentFixture<Exercise3Component>;
+let fixture: ComponentFixture<Exercise3Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

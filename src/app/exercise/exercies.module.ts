@@ -7,13 +7,15 @@ import { Exercise3Component } from './components/exercise3/exercise3.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { DirectivesModule } from '../directives/directive.modue';
+import { Exercise4Component } from './components/exercise4/exercise4.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, },
   { path: 'one', component: Exercise1Component, },
   { path: 'two', component: Exercise2Component, },
-  { path: 'three', component: Exercise3Component, }
+  { path: 'three', component: Exercise3Component, },
+  { path: 'four', component: Exercise4Component, }
 ];
 
 
@@ -22,7 +24,9 @@ const routes: Routes = [
     Exercise1Component,
     Exercise2Component,
     Exercise3Component,
+    Exercise4Component,
     HomeComponent,
+    Exercise4Component,
   ],
   imports: [
     CommonModule,

@@ -18,9 +18,13 @@ export class AppHttpService implements HttpInterceptor {
     if (request.method == 'PUT') {
       return of(new HttpResponse({ status: 204, body: { success: 1 } }));
     } else if (request.method == 'DELETE' || request.method == 'POST') {
-      return of(new HttpResponse({ status: 200, }));
+      return of(new HttpResponse({ status: 200, body: {message: 'success'} }));
     }
     return next.handle(request)
+  }
+
+  post(data?: any): Observable<any> {
+    return this.http.post<any>(AppHttpService.BASE_URL, data);
   }
 
   update(data?: any): Observable<any> {
