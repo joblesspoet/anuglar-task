@@ -2,11 +2,21 @@
 <div class="toolbar" role="banner">
   <img width="40" alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
-  <span><a routerLink="/exercise/">Home</a></span>
+  <span><a routerLink="/exercise/">Exercise 1</a></span>
   <div class="spacer"></div>
 
 </div>
 
 <div class="content" role="main">
-    <div appHeloDirective >this is text colonnnr....</div>
+    <!-- <div appHeloDirective >this is text colonnnr....</div> -->
+    <form [formGroup]="phoneForm" novalidate>
+      <div class="form-group">
+        <label for="phone" style="margin-right: 5px;">Phone Number:</label>
+        <input id="phone" class="form-control" candada-phone [preValue]="phoneForm.value.phone"  [phoneControl]="phoneForm.controls['phone']" formControlName="phone" maxlength="14" 
+        [ngClass]="(phoneForm.controls['phone'].invalid)? 'errmsg' : 'validmsg'">
+        <div><label style="font-size: 10px; color: green;">Valid pattern is : (xxx) xxx-xxxx</label></div>	
+        <div style="margin-top: 10px;">Your Phone is: {{phoneForm.get('phone')?.status | json}}</div>
+      </div>
+    </form>
+
 </div>

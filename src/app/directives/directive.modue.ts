@@ -2,11 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { CanadaPhoneDirective } from './canada-phone.directive';
-import { HeloDirectiveDirective } from './helo-directive.directive';
 
 @NgModule({
-  declarations: [CanadaPhoneDirective, HeloDirectiveDirective],
+  declarations: [CanadaPhoneDirective],
   imports: [CommonModule],
-  exports: [CanadaPhoneDirective, HeloDirectiveDirective],
+  exports: [CanadaPhoneDirective],
 })
 export class DirectivesModule {}
